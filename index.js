@@ -4,7 +4,7 @@ const { connection } = require('./db')
 const app=express()
 const cors=require('cors')
 app.use(express.json())
-app.use(cors)
+app.use(cors())
 app.use('/contacts',useRouter)
 app.get('/',(req,res)=>{
     res.status(200).send({"msg":"Hello this is home"})
